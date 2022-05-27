@@ -32,7 +32,7 @@ http://127.0.0.1:5000/
 
 #### Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 1. Fork the Project
 2. Open a Pull Request
