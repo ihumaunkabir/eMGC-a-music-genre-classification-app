@@ -29,6 +29,8 @@ In your browser, hit
 http://127.0.0.1:5000/
 ```
 
+#### Screenshots
+Screenshots can be found in the images/ directory of the repo.
 
 #### Contributing
 
