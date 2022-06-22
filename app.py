@@ -6,6 +6,7 @@ from wtforms.validators import DataRequired
 from data import GENRES
 from modules import get_genre, eval_model
 from werkzeug.utils import secure_filename
+import re
 
 
 app = Flask(__name__)
@@ -27,18 +28,19 @@ def index():
     
     if form.validate_on_submit():
         filename = secure_filename(form.file.data.filename)
+        true_label = str(re.sub(r'[^a-zA-Z]', '', filename[:10]))
         form.file.data.save('uploads/' + filename)
         id = eval_model(filename)
 
-        return redirect(url_for('genre', id=id))
+        return redirect(url_for('genre', id=id, true_label=true_label))
 
     return render_template('index.html', form=form)
 
 
-@app.route('/genre/<id>')
-def genre(id):
+@app.route('/genre/<id>/<true_label>')
+def genre(id, true_label):
     id, name, desc = get_genre(GENRES, id)
-    return render_template('genre.html', id=id, name=name, desc=desc)
+    return render_template('genre.html', id=id, name=name, desc=desc, true_label=true_label)
 
 
 @app.errorhandler(404)
