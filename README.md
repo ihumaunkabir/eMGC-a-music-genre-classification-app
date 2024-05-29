@@ -1,6 +1,5 @@
 ### eMGC- A Music Genre Classification Application
-A project based on convolutional neural network to classify music genre. This project is a part of Neural Network Technology course by Сейедмилад Сейедамир Ранаей Сиадат.
-
+A project based on convolutional neural network to classify music genre. This project is a part of Neural Network Technology.
 #### Features
   - Music Genre classification based on an uploaded audio file.
   - Faster and accurate genre with 92+ percentage accuracy.
